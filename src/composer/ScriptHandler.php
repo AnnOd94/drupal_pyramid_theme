@@ -11,12 +11,15 @@ class ScriptHandler {
 
   public static function build() {
 
+    $root = 'web';
+    $theme_path = $root . "/themes/contrib/drupal_mastaba_theme/";
+
     $env = (getenv('ENV') === 'production')
         ? '--production'
         : '';
 
     // Install npm and build assets.
-    passthru("npm install {$env} && npm run build:all");
+    passthru("cd {$theme_path} && npm install {$env} && npm run build:all");
 
   }
 
