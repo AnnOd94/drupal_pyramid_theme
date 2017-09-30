@@ -1,4 +1,5 @@
 # Ignore generated files
+vendor/
 node_modules/
 css/
 
