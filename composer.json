@@ -17,13 +17,13 @@
     ]
   },
   "scripts": {
-    "build": "DrupalMastabaTheme\\composer\\ScriptHandler::build",
-    "update": "DrupalMastabaTheme\\composer\\ScriptHandler::update",
+    "drupal-mastaba-theme-build": "DrupalMastabaTheme\\composer\\ScriptHandler::build",
+    "drupal-mastaba-theme-update": "DrupalMastabaTheme\\composer\\ScriptHandler::update",
     "post-install-cmd": [
-      "@build"
+      "@drupal-mastaba-theme-build"
     ],
     "post-update-cmd": [
-      "@update"
+      "@drupal-mastaba-theme-update"
     ]
   }
 }
