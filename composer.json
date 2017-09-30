@@ -1,0 +1,15 @@
+{
+  "name": "matthieuscarset/drupal-mastaba-theme",
+  "description": "A theme for Drupal Mastaba project theme.",
+  "type": "drupal-theme",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Matthieu SCARSET",
+      "role": "Fullstack Drupal developer",
+      "email": "m@matthieuscarset.com",
+      "homepage": "http://matthieuscarset.com/"
+    }
+  ],  
+  "require": {}
+}
