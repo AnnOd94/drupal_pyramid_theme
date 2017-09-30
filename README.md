@@ -1,17 +1,33 @@
-# Pyramid Drupal Theme
+# Drupal Mastaba Theme
 
-This file has been created from within our main project [Pyramid](https://bitbucket.org/appno/pyramid-drupal).
+This theme is used in our main project at [Drupal Mastaba](https://github.com/MatthieuScarset/drupal-mastaba).
 
-If you see it, it means you have successfully configured Git subtree.
+It aims to be added via Composer and be updated via Git Subtree.
 
-Congrats!
+## Getting started
 
-## How to add this theme with Git subtree
-
+Add this theme as a dependency to your main Drupal project:
 ```
-git remote add -f pyramid_drupal_theme ssh://git@bitbucket.org/appno/pyramid_drupal_theme.git
-git subtree add --prefix web/modules/custom/pyramid_drupal_theme pyramid_drupal_theme master --squash
-git fetch pyramid_drupal_theme master
-git subtree pull --prefix web/modules/custom/pyramid_drupal_theme pyramid_drupal_theme master --squash
-git subtree push --prefix=web/modules/custom/pyramid_drupal_theme pyramid_drupal_theme master
+composer require matthieuscarset/drupal_mastaba_theme
+```
+
+Build assets:
+```
+cd web/themes/custom/drupal_mastaba_theme
+npm install
+```
+
+Add this theme as a subproject with Git Subtree:
+```
+git remote add -f drupal_mastaba_theme ssh://git@github.com:MatthieuScarset/drupal_mastaba_theme.git
+git subtree add --prefix web/modules/custom/drupal_mastaba_theme drupal_mastaba_theme master --squash
+git fetch drupal_mastaba_theme master
+git subtree pull --prefix web/modules/custom/drupal_mastaba_theme drupal_mastaba_theme master --squash
+```
+
+Contribute back to this theme:
+```
+git add .
+git commit -m "Your commit message"
+git subtree push --prefix=web/modules/custom/drupal_mastaba_theme drupal_mastaba_theme master
 ```
