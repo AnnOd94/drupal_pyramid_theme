@@ -10,5 +10,20 @@
       "email": "m@matthieuscarset.com",
       "homepage": "http://matthieuscarset.com/"
     }
-  ]
+  ],
+  "autoload": {
+    "classmap": [
+      "src/composer/ScriptHandler.php"
+    ]
+  },
+  "scripts": {
+    "build": "DrupalMastabaTheme\\composer\\ScriptHandler::build",
+    "update": "DrupalMastabaTheme\\composer\\ScriptHandler::update",
+    "post-install-cmd": [
+      "@build"
+    ],
+    "post-update-cmd": [
+      "@update"
+    ]
+  }  
 }
