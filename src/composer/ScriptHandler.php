@@ -2,17 +2,17 @@
 
 /**
  * @file
- * Contains \DrupalMastabaTheme\composer\ScriptHandler.
+ * Contains \DrupalPyramidTheme\composer\ScriptHandler.
  */
 
-namespace DrupalMastabaTheme\composer;
+namespace DrupalPyramidTheme\composer;
 
 class ScriptHandler {
 
   public static function build() {
 
     $root = 'web';
-    $theme_path = $root . "/themes/contrib/drupal_mastaba_theme/";
+    $theme_path = $root . "/themes/contrib/drupal_pyramid_theme/";
 
     $env = (getenv('ENV') === 'production')
         ? '--production'

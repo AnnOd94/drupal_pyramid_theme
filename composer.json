@@ -1,6 +1,6 @@
 {
-  "name": "matthieuscarset/drupal_mastaba_theme",
-  "description": "A theme for Drupal Mastaba project theme.",
+  "name": "matthieuscarset/drupal_pyramid_theme",
+  "description": "A theme for Drupal Pyramid project theme.",
   "type": "drupal-theme",
   "license": "GPL-2.0+",
   "authors": [
@@ -17,13 +17,13 @@
     ]
   },
   "scripts": {
-    "drupal-mastaba-theme-build": "DrupalMastabaTheme\\composer\\ScriptHandler::build",
-    "drupal-mastaba-theme-update": "DrupalMastabaTheme\\composer\\ScriptHandler::update",
+    "drupal-pyramid-theme-build": "DrupalPyramidTheme\\composer\\ScriptHandler::build",
+    "drupal-pyramid-theme-update": "DrupalPyramidTheme\\composer\\ScriptHandler::update",
     "post-install-cmd": [
-      "@drupal-mastaba-theme-build"
+      "@drupal-pyramid-theme-build"
     ],
     "post-update-cmd": [
-      "@drupal-mastaba-theme-update"
+      "@drupal-pyramid-theme-update"
     ]
   }
 }
