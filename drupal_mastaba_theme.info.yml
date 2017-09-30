@@ -1,4 +1,4 @@
-name: Pyramid Theme'
+name: 'Mastaba Theme'
 type: theme
 description: 'A D8 demo theme.'
 package: Core
@@ -8,8 +8,8 @@ hidden: false
 base theme: classy
 
 libraries:
-  - pyramid_drupal_theme/base
+  - drupal_mastaba_theme/base
 
 libraries-extend:
   node/drupal.node:
-    - pyramid_drupal_theme/node
+    - drupal_mastaba_theme/node
