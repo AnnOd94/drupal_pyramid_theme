@@ -1,6 +1,6 @@
 # Drupal Pyramid Theme
 
-This theme is used in our main project at [Drupal Pyramid](https://github.com/MatthieuScarset/drupal-pyramid).
+This theme is used in our main project at [Drupal Pyramid](https://github.com/drupal-pyramid/drupal-pyramid).
 
 It aims to be added via Composer and be updated via Git Subtree.
 
@@ -8,7 +8,7 @@ It aims to be added via Composer and be updated via Git Subtree.
 
 1. Add this theme as a dependency to your main Drupal project:
 ```
-composer require matthieuscarset/drupal_pyramid_theme
+composer require drupal-pyramid/drupal_pyramid_theme
 ```
 
 2. **Add autoload custom scripts to your composer.json**:
@@ -34,7 +34,7 @@ composer require matthieuscarset/drupal_pyramid_theme
 
 3. Add this theme as a subproject with Git Subtree:
 ```
-git remote add -f drupal_pyramid_theme ssh://git@github.com:MatthieuScarset/drupal_pyramid_theme.git
+git remote add -f drupal_pyramid_theme ssh://git@github.com:drupal-pyramid/drupal_pyramid_theme.git
 git subtree add --prefix web/modules/custom/drupal_pyramid_theme drupal_pyramid_theme master --squash
 git fetch drupal_pyramid_theme master
 git subtree pull --prefix web/modules/custom/drupal_pyramid_theme drupal_pyramid_theme master --squash
