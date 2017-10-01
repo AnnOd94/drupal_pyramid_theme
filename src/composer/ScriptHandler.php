@@ -2,31 +2,23 @@
 
 /**
  * @file
- * Contains \DrupalPyramidTheme\composer\ScriptHandler.
+ * Contains \DrupalPyramidTheme\ScriptHandler.
  */
 
-namespace DrupalPyramidTheme\composer;
+namespace DrupalPyramidTheme;
 
 class ScriptHandler {
 
+  /**
+   *
+   * Install npm and build assets.
+   *
+   * @return void
+   */
   public static function build() {
-
-    $root = 'web';
-    $theme_path = $root . "/themes/contrib/drupal_pyramid_theme/";
-
-    $env = (getenv('ENV') === 'production')
-        ? '--production'
-        : '';
-
-    // Install npm and build assets.
-    passthru("cd {$theme_path} && npm install {$env} && npm run build:all");
-
-  }
-
-  public static function update() {
-    // Update npm and regenerate assets.
-    passthru("npm update && npm run build:all");
-
+    $env = (getenv('ENV') === 'production') ? '--production' : '';
+    $themePath = "./web/themes/contrib/drupal_pyramid_theme/";
+    passthru("cd {$themePath} && npm update {$env} && npm run build:all");
   }
 
 }
