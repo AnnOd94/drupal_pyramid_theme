@@ -53,12 +53,13 @@ We use custom Composer scripts to generate assets (see `composer.json`).
 
 ```
   "scripts": {
-    "build": "DrupalPyramidTheme\\ScriptHandler::build",
+    "drupal-pyramid-theme-build": "DrupalPyramidTheme\\ScriptHandler::build",
+    "drupal-pyramid-theme-update": "DrupalPyramidTheme\\ScriptHandler::update",
     "post-install-cmd": [
-      "@build"
+      "@drupal-pyramid-theme-build"
     ],
     "post-update-cmd": [
-      "@build"
+      "@drupal-pyramid-theme-update"
     ]
   }
 ```
