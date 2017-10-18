@@ -1,7 +1,7 @@
 {
   "name": "drupal-pyramid/drupal_pyramid_theme",
   "description": "A theme for Drupal Pyramid project theme.",
-  "type": "drupal-theme",
+  "type": "drupal-theme-custom",
   "license": "GPL-2.0+",
   "authors": [
     {
