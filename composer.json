@@ -17,13 +17,13 @@
     ]
   },
   "scripts": {
-    "drupal-pyramid-theme-build": "DrupalPyramidTheme\\composer\\ScriptHandler::build",
-    "drupal-pyramid-theme-update": "DrupalPyramidTheme\\composer\\ScriptHandler::update",
+    "theme-build": "DrupalPyramidTheme\\ScriptHandler::build",
+    "theme-update": "DrupalPyramidTheme\\ScriptHandler::update",
     "post-install-cmd": [
-      "@drupal-pyramid-theme-build"
+      "@theme-build"
     ],
     "post-update-cmd": [
-      "@drupal-pyramid-theme-update"
+      "@theme-update"
     ]
   }
 }
