@@ -1,0 +1,42 @@
+@import '../init';
+
+.section--hero {
+  @include align-items(center);
+  @include justify-content(center);
+
+  overflow: hidden;
+  min-height: 10em;
+
+  @include bk('medium') {
+    min-height: 20em;
+  }
+
+  .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: -1;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .field-link a,
+  .field-title {
+    color: $white;
+  }
+  .field-title {
+    @include title(2);
+  }
+  .field-link {
+    @include title(4);
+
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+}

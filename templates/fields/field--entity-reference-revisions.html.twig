@@ -1,0 +1,14 @@
+{% extends 'field.html.twig' %}
+
+{% block before %}
+{% endblock %}
+
+{% block after %}
+{% endblock %}
+
+{% block content %}
+{# Remove default (and useless) markup around entity references #}
+{% for item in items %}
+{{- item.content -}}
+{% endfor %}
+{% endblock %}

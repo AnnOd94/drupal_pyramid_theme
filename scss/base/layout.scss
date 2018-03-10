@@ -1,0 +1,60 @@
+@import '../init';
+
+.layout {
+  &--behind {
+    z-index: -1 !important;
+  }
+
+  &--above {
+    z-index: 99 !important;
+  }
+
+  &--site {
+    @include container();
+  }
+
+  &--site,
+  &--main,
+  &--sidebar {
+    @include flexbox();
+    @include flex-direction(column);
+  }
+
+  &--header,
+  &--breadcrumbs,
+  &--footer {
+    @include flexbox();
+    @include flex-direction(column);
+    
+    @include bk('medium') {
+      @include flex-direction(row);
+    }
+  }
+
+  &--header {
+    z-index: 1;
+
+    @include justify-content(flex-start);
+    @include align-items(flex-start);
+    @include flex-wrap(wrap);
+
+    @include bk('medium') {
+      z-index: 2; 
+
+      @include justify-content(space-between);
+      @include align-items(center);
+    }
+  }
+
+  &--main {
+    z-index: 0;
+  }
+
+  &--noscroll { 
+    overflow: hidden;
+  }
+
+  &--region {
+    position: relative;
+  }
+}

@@ -1,0 +1,19 @@
+@import '../init';
+
+.layout--breadcrumbs {
+  background-color: $marine;
+  a {
+    color: $white;
+  }
+}
+
+.region-breadcrumb {
+  width: 100%;
+}
+
+.breadcrumb {
+  @include flexbox();
+  @include flex-direction(row);
+  @include justify-content(flex-start);
+  @include align-items(center);
+}

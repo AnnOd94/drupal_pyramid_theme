@@ -1,0 +1,17 @@
+@import '../init';
+
+// Language switcher.
+.block-language {
+  .links,
+  .language-select {
+    display: none;
+    list-style-type: none;
+  }
+  // Input Hack.
+  // @see https://tutorialzine.com/2015/08/quick-tip-css-only-dropdowns-with-the-checkbox-hack
+  .language-select {
+    &:checked ~ .links {
+      display: block
+    }
+  }
+}

@@ -1,12 +1,167 @@
+# Global stylesheets, load on every page.
 base:
   version: VERSION
   css:
+    base:
+      css/base/reset.css: { weight: -10 }
+      css/base/layout.css: { weight: -10 }
+      css/base/fonts.css: { weight: -10 }
+      css/base/typography.css: { weight: -10 }
     component:
-      css/components/pyramid.css: { weight: -10 }
+      css/custom/admin.css: { weight: -10 }
+      css/custom/turbo.css: { weight: -10 }
+  dependencies:
+    - turbo/page.header
+    - turbo/page.footer
+    - turbo/base.icons    
+    - turbo/base.wysiwyg
+    - turbo/base.slider
+    - turbo/base.stick_in_parent    
 
+# Vendor - HeadroomJS
+# @see http://wicky.nillia.ms/headroom.js/
+vendor.headroom:
+  remote: https://cdnjs.cloudflare.com
+  version: 0.9.4
+  license:
+    name: MIT
+    url: https://github.com/angular/angular.js/blob/master/LICENSE
+    gpl-compatible: true
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js: { type: external, minified: true }
+# Vendor - Slick slider.
+# @see https://github.com/kenwheeler/slick
+# @see http://kenwheeler.github.io/slick/ 
+vendor.slick:
+  remote: https://cdnjs.cloudflare.com
+  version: 1.8.1
+  license:
+    name: MIT
+    url: https://github.com/angular/angular.js/blob/master/LICENSE
+    gpl-compatible: true
+  css:
+    base:
+      https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css: { type: external, minified: true }
+    theme:
+      https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css: { type: external, minified: true }
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js: { type: external, minified: true }
+# Vendor - Sticky kit
+# @see http://leafo.net/sticky-kit/
+vendor.sticky.kit:
+  remote: https://cdnjs.cloudflare.com
+  version: 1.1.3
+  license:
+    name: MIT
+    url: https://github.com/angular/angular.js/blob/master/LICENSE
+    gpl-compatible: true
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js: { type: external, minified: true }
 
+# Miscellaneaous
+base.icons:
+  version: VERSION
+  css:
+    base:
+      css/base/icons.css: { weight: -10 }
+      css/base/svg.css: { weight: -10 }
+base.wysiwyg:
+  version: VERSION
+  css:
+    base:
+      css/base/wysiwyg.css: { weight: -10 }
+base.slider:
+  version: VERSION
+  css:
+    component:
+      css/components/slider.css: { weight: -10 }
+  js:
+    js/components/slider.js: { }
+  dependencies:
+    - core/matchmedia
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - turbo/vendor.slick
+base.stick_in_parent:
+  version: VERSION
+  js:
+    js/components/stick_in_parent.js: { }
+  dependencies:
+      - core/jquery
+      - core/jquery.once
+      - core/drupal
+      - core/drupalSettings
+      - turbo/vendor.sticky.kit
+
+# Page
+page.header:
+  version: VERSION
+  css:
+    base:
+      css/components/page.header.css: { weight: -10 }
+      css/components/page.header.sticky.css: { weight: -10 }
+      css/components/page.header.mobile.css: { weight: -10 }
+  js:
+    js/components/page.header.js: {}
+  dependencies:
+    - core/matchmedia
+    - core/drupal
+    - core/drupalSettings
+    - turbo/vendor.headroom
+page.footer:
+  version: VERSION
+  css:
+    base:
+      css/components/page.footer.css: { weight: -10 }
+
+# Nodes library.
 node:
   version: VERSION
   css:
     component:
       css/components/node.css: { weight: -10 }
+
+# Blocks.
+block:
+  version: VERSION
+  css:
+    component:
+      css/blocks/block.css: { weight: -10 }
+block.branding:
+  version: VERSION
+  css:
+    component:
+      css/blocks/block.branding.css: { weight: -10 }
+block.language:
+  version: VERSION
+  css:
+    component:
+      css/blocks/block.language.css: { weight: -10 }      
+block.search:
+  version: VERSION
+  css:
+    component:
+      css/components/block.search.css: { weight: -10 }
+block.page_title:
+  version: VERSION
+  css:
+    component:
+      css/components/block.page_title.css: { weight: -10 }
+block.breadcrumbs:
+  version: VERSION
+  css:
+    component:
+      css/components/block.breadcrumbs.css: { weight: -10 }
+
+# Paragraphs (renamed Sections).
+section:
+  version: VERSION
+  css:
+    component:
+      css/components/section.css: { weight: -10 }
+section.hero:
+  version: VERSION
+  css:
+    component:
+      css/components/section.hero.css: { weight: -10 }

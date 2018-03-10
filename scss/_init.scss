@@ -1,0 +1,99 @@
+ // Spacing
+$padding: 10px;
+$margin: 10px;
+$site-padding: 5vw;
+$sidebar-width: 25%;
+$sidebar-width-max: 25em;
+
+// Import base mixins.
+@import './mixins/breakpoint';
+@import './mixins/flexbox';
+@import './mixins/grid';
+
+// Colors
+$white: #ffffff;
+$black: #000000;
+$black-light: #222222;
+$black-light: #272823;
+$grey-dark: #444444;
+$grey: #b1b1b1;
+$grey-medium: #dcdfd4;
+$grey-light: #f4f4f4;
+$blue: #38c2d9;
+$marine: #116581;
+$navy: #004f6e;
+$purple: #922788;
+$orange: #FF6600;
+
+$color-main: $navy;
+$text-color: $black;
+$heading-color: $black-light;
+$quiet-color: $grey;
+$loud-color: $black;
+
+$base-font-size: 18px;
+$base-font-family: europa, sans-serif;
+$base-font-weight: 300;
+$base-line-height: 1.8;
+
+$bold-font-family: europa-bold, sans-serif;
+
+$fixed-font-family: 'Lucida Console', Courier, monospace;;
+$fixed-font-size: 15px;
+$fixed-line-height: 1.2;
+
+$heading-font-family: tiempos, sans-serif;
+$heading-font-weight: 700;
+
+$footer-font-family: maaxregular;
+$bold-footer-font-family: maaxmedium;
+
+// Responsive font-size (based on device width);
+$h1-font-size: 7vw;
+$h2-font-size: 4vw;
+$h3-font-size: 3vw;
+$h4-font-size: 2vw;
+$h5-font-size: 1.8vw;
+$h6-font-size: 1.2vw;
+// Mobile responsive font-sizes.
+$h1-font-size-mobile: 14vw;
+$h2-font-size-mobile: 10vw;
+$h3-font-size-mobile: 8vw;
+$h4-font-size-mobile: 6vw;
+$h5-font-size-mobile: 5vw;
+$h6-font-size-mobile: 4vw;
+
+// Fixed font-size.
+$h1-font-size-fixed: 400%;
+$h2-font-size-fixed: 250%;
+$h3-font-size-fixed: 200%;
+$h4-font-size-fixed: 180%;
+$h5-font-size-fixed: 130%;
+$h6-font-size-fixed: 120%;
+
+$sizes_desktop: (
+  1: ($h1-font-size),
+  2: ($h2-font-size),
+  3: ($h3-font-size),
+  4: ($h4-font-size),
+  5: ($h5-font-size),
+  6: ($h6-font-size)
+)
+  !default;
+
+$sizes_mobile: (
+  1: ($h1-font-size-mobile),
+  2: ($h2-font-size-mobile),
+  3: ($h3-font-size-mobile),
+  4: ($h4-font-size-mobile),
+  5: ($h5-font-size-mobile),
+  6: ($h6-font-size-mobile)
+)
+  !default;
+
+$link-color: $color-main;
+$link-hover-color: saturate($color-main, 20%);
+$link-visited-color: saturate($color-main, 80%);
+
+// Import useful files
+@import './mixins/mixins';

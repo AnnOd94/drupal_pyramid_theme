@@ -1,0 +1,52 @@
+@import '../init';
+
+// Base icon class.
+.icon {
+  position: relative;
+  text-indent: -9999px;
+  z-index: 0;
+
+  &:after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    margin: auto;
+    top: 0; bottom: 0; right: 0; left: 0;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+// White SVG.
+.icon-white {
+  &:after {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+  }
+}
+// Element with an icon.
+*[data-icon] {
+  @extend .icon;
+  
+  color: $black;
+  padding-left: 1.8em;
+  font-size: 1em;
+  text-indent: 0;
+  vertical-align: middle;
+
+  &:after {
+    bottom: 0;
+    right: auto;
+
+    @include bk('medium') {
+      font-size: .85em;
+    }
+  }
+}
+// Default icon.
+*[data-icon]:after,
+*[data-icon='default']:after {
+  background-image: url('../../images/svg/icon_default.svg');
+}

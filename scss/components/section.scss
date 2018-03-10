@@ -1,0 +1,8 @@
+@import '../init';
+
+.section {
+  @include flexbox();
+  @include flex-direction(column);
+
+  position: relative;
+}

@@ -1,0 +1,6 @@
+@import '../init';
+
+.node {
+  @include flexbox();
+  @include flex-direction(column);
+}

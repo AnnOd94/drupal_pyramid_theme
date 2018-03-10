@@ -1,0 +1,19 @@
+{% extends "links.html.twig" %}
+
+{#
+/**
+ * @file
+ * Theme override for the Language Switcher links.
+ *
+ * @see hook_link_alter().
+ */
+#}
+
+{% block libraries %}
+{{ attach_library('turbo/block.language') }}
+{% endblock %}
+
+{% block before %}
+<input type="checkbox" id="language-select" class="language-select">
+<label for="language-select">{{ 'Select your language'|t }}</label>
+{% endblock %}

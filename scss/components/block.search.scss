@@ -1,0 +1,22 @@
+@import "../init";
+
+.block-search {
+  position: relative;
+  @include flexbox();
+  @include justify-content(center);
+
+  form {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  &.is-active,
+  &:active,
+  &:hover {
+    form {
+      display: inline-block;
+    }
+  }
+}

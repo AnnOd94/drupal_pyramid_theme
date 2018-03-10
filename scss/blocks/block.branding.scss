@@ -1,0 +1,10 @@
+@import '../init';
+
+// Branding block.
+.block-system-branding-block {
+  .site-name,
+  .site-slogan {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

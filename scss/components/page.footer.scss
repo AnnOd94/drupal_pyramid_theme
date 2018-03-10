@@ -1,0 +1,27 @@
+
+@import '../init';
+
+.layout--footer {
+  // Footer blocks;
+  > * {
+    background-color: $black-light;
+
+    @include flex(1 100%);
+
+    @include bk('medium') {
+      @include flex(1 50%);
+    }
+  }
+
+  .block {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.region-footer {
+  .menu {
+    margin-left: auto;
+  }
+}
+

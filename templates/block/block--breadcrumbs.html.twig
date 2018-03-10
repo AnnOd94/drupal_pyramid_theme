@@ -1,0 +1,14 @@
+{% extends "block.html.twig" %}
+
+{#
+/**
+ * @file
+ * Theme override for the Breadcrumbs block.
+ *
+ * @see turbo_preprocess_block()
+ */
+#}
+
+{% block libraries %}
+{{ attach_library('turbo/block.breadcrumbs') }}
+{% endblock %}

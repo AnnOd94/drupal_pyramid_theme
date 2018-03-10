@@ -1,0 +1,34 @@
+{#
+/**
+ * Wrapper file to include SVG.
+ * You need to prepare your SVG files with the following markup:
+ * @code
+ <svg
+  width="{{ width }}"
+  height="{{ height }}"
+  class="{{ svg_classes }}"
+  [...]>
+ * @endocde
+ *
+ */
+#}
+{% set width = width|default('30') %}
+{% set height = height|default('30') %}
+{% set svg_classes = svg_classes|merge(['svg'])|join(' ') %}
+
+{#
+ # No need to attach our libary here because 
+ # it has been required by our Theme's base library already.
+ # @see turbo.libraries.yml
+ #}
+{# attach_library('turbo/svg') #}
+
+{% if icon %}
+  {% include "@turbo/svg/" ~ icon ~ ".html.twig" with {
+    'width': width,
+    'height': height,
+    'svg_classes': svg_classes
+  } %}
+{% else %}
+  <span class="messages messages--error">{{ icon }} - {{ "Icon file doesn't exist"|t }}</span>
+{% endif %}

@@ -1,0 +1,38 @@
+$col_sizes: (
+  1: (100%),
+  2: (50%),
+  3: (33.3337%),
+  4: (25%)
+)
+  !default;
+
+@mixin view_grid($cols: 4) {
+  .view-content {    
+    @include flexbox();
+    @include flex-direction(column);
+    @include flex-wrap(wrap);
+    @include justify-content(flex-start);
+    @include align-items(stretch);
+    
+    @include bk('medium') {
+      @include flex-direction(row);
+    }
+    
+    .views-row {
+      @include flex(1 auto);
+      
+      width: 100%;
+      
+      @include bk('medium') {
+        @include flex(1 #{map-get($col_sizes, $cols)});
+        
+        max-width: #{map-get($col_sizes, $cols)};
+        padding: 1em;
+      }
+    }
+  }
+  
+  .views-row {
+    outline: none;
+  }
+}

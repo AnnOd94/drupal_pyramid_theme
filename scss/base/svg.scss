@@ -1,0 +1,8 @@
+@import "../init";
+
+.svg {
+  display: inline-block;
+  &--white {
+    fill: $white;
+  }
+}

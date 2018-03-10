@@ -1,0 +1,36 @@
+@import '../init';
+
+.block {
+  display: block;
+
+  .block-title {
+    @include title(2);
+  }
+
+  .block-subtitle {
+    @include title(5);  
+  }  
+}
+
+// Quick fix to global blocks.
+.block-system-main-block {
+  @include flexbox();
+  @include flex-direction(column);
+}
+.block-menu-burger-block {
+  margin: auto !important;
+  padding: 0 !important;
+}
+ 
+// Alternative display with a grey background.
+.block--alternative {
+  background-color: $grey-light;
+}
+
+// Alternative display with a third of the background painted in grey.
+.block--alternative--background {
+  @include bk('medium') {
+    background: linear-gradient(270deg, transparent 60%, $grey-light 40%);
+    padding-bottom: 0;
+  }
+}

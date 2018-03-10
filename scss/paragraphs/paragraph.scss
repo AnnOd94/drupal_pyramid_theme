@@ -1,0 +1,18 @@
+@import '../init';
+
+.paragraph {
+  @include flexbox();
+
+  position: relative;
+  
+  .field {
+    width: 100%;
+  }
+
+  // This is really useful :D
+  // For instance, it forces the content to be fullwdith
+  // when we embed a View in a paragraph.
+  .field__item {
+    width: 100%;
+  }
+}

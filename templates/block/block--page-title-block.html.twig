@@ -1,0 +1,14 @@
+{% extends "block.html.twig" %}
+
+{#
+/**
+ * @file
+ * Theme override for the Page title form block.
+ *
+ * @see turbo_preprocess_block()
+ */
+#}
+
+{% block libraries %}
+{{ attach_library('turbo/block.page_title') }}
+{% endblock %}

@@ -1,0 +1,59 @@
+// Headline font;
+@font-face {
+  font-family: 'tiempos';
+  src: url('../../fonts/tiempos/TiemposHeadline-Black.eot');
+  src: url('../../fonts/tiempos/TiemposHeadline-Black.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/tiempos/TiemposHeadline-Black.woff2') format('woff2'),
+    url('../../fonts/tiempos/TiemposHeadline-Black.woff') format('woff'),
+    url('../../fonts/tiempos/TiemposHeadline-Black.ttf') format('truetype'),
+    url('../../fonts/tiempos/TiemposHeadline-Black.svg#TiemposHeadline-Black') format('svg');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'europa-bold';
+  src: url('../../fonts/europa/Europa-Bold.eot');
+  src: url('../../fonts/europa/Europa-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/europa/Europa-Bold.woff2') format('woff2'),
+    url('../../fonts/europa/Europa-Bold.woff') format('woff'),
+    url('../../fonts/europa/Europa-Bold.ttf') format('truetype'),
+    url('../../fonts/europa/Europa-Bold.svg#Europa-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'europa';
+  src: url('../../fonts/europa/Europa-Regular.eot');
+  src: url('../../fonts/europa/Europa-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/europa/Europa-Regular.woff2') format('woff2'),
+    url('../../fonts/europa/Europa-Regular.woff') format('woff'),
+    url('../../fonts/europa/Europa-Regular.ttf') format('truetype'),
+    url('../../fonts/europa/Europa-Regular.svg#Europa-Regular') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+// Footer fonts;
+@font-face{
+  font-family: 'maaxregular';
+  src: url('../../fonts/maax/Sans-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/maax/Sans-Regular.woff') format('woff'),
+    url('../../fonts/maax/Sans-Regular.woff2') format('woff2'),
+    url('../../fonts/maax/Sans-Regular.ttf') format('truetype'),
+    url('../../fonts/maax/Sans-Regular.svg') format('svg');
+  font-weight:400;
+  font-style:normal;
+}
+
+@font-face{
+  font-family: 'maaxmedium';
+  src: url('../../fonts/maax/Sans-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/maax/Sans-Medium.woff') format('woff'),
+    url('../../fonts/maax/Sans-Medium.woff2') format('woff2'),
+    url('../../fonts/maax/Sans-Medium.ttf') format('truetype'),
+    url('../../fonts/maax/Sans-Medium.svg') format('svg');
+  font-weight:700;
+  font-style:normal;
+}

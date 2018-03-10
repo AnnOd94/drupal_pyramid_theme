@@ -27,7 +27,7 @@ class ScriptHandler {
     passthru("echo '==============================='");
     passthru("echo 'Generating Pyramid theme assets'");
     passthru("echo '==============================='");
-    passthru("cd {$themePath} && npm install {$env} && npm run build:all");
+    passthru("cd {$themePath} && npm install {$env} && npm run build");
   }
 
   /**
@@ -39,7 +39,7 @@ class ScriptHandler {
     passthru("echo '==============================='");
     passthru("echo 'Updating Pyramid theme assets'");
     passthru("echo '==============================='");
-    passthru("cd {$themePath} && npm update {$env} && npm run build:all");
+    passthru("cd {$themePath} && npm update {$env} && npm run build");
   }
 
 }

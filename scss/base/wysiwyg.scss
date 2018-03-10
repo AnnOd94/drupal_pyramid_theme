@@ -1,0 +1,25 @@
+@import '../init.scss';
+
+h1.editor_h1 {
+  @include title(1);
+}
+h2.editor_h2 {
+  @include title(2);
+}
+h3.editor_h3 {
+  @include title(3);
+}
+h4.editor_h4 {
+  @include title(4);
+}
+span.editor_highlighted {
+  font-weight: bold;
+}
+span.editor_button {
+  display: inline-block;
+  margin: 1em auto;
+  padding: .5em .75em;
+  border-radius: 3em;
+  background: $orange;
+  color: $white;
+}

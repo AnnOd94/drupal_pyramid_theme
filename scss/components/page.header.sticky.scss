@@ -1,0 +1,58 @@
+@import '../init';
+
+// Sticky Header
+.site-header {
+  &.headroom {
+    will-change: transform;
+    transition: all 200ms linear;
+    transition-property: position, background;
+  }
+
+  &.headroom--unpinned,
+  &.headroom--pinned {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: $site-padding;
+    left: $site-padding;
+  }
+
+  &.headroom--pinned {
+    background: $white;
+    transform: translateY(0%);
+
+    // Push it down a bit when user there is Drupal toolbar.
+    .toolbar-horizontal & {
+      top: 39px;
+    }
+
+    .toolbar-tray-open & {
+      top: 80px;
+    }
+
+    &.headroom--not-top {
+      a {
+        color: $orange;
+      }
+
+      &.header--dropdown-open {
+        @include bk('medium') {
+          background-color: transparent;
+        }
+      }
+    }
+
+    &.headroom--top {
+      position: relative;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  &.headroom--unpinned {
+    &:not(.header--mobile-open) {
+      transform: translateY(-100%);
+    }
+  }
+}

@@ -1,11 +1,31 @@
 name: 'Pyramid Theme'
 type: theme
-description: 'A D8 demo theme.'
-package: Core
+description: 'A D8 base theme.'
+package: Pyramid
 version: VERSION
 core: 8.x
-hidden: false
+hidden: true
 base theme: classy
+
+regions:
+  admin: "Admin area"
+  preheader: 'Preheader'
+  header_mobile: 'Header (mobile)'
+  header_left: 'Header (left)'
+  header_right: 'Header (right)'
+  breadcrumb: Breadcrumb
+  content: Content
+  sidebar: Sidebar
+  prefooter: "Prefooter"
+  footer_left: 'Footer (left)'
+  footer_right: 'Footer (right)'
+  footer: 'Footer'
+  # This region is not rendered.
+  # Place Block inside it to use them in Paragraphs.
+  blocks_for_paragraphs: 'Blocks for Paragraphs'
+
+ckeditor_stylesheets:
+  - css/base/wysiwyg.css
 
 libraries:
   - drupal_pyramid_theme/base
@@ -13,3 +33,6 @@ libraries:
 libraries-extend:
   node/drupal.node:
     - drupal_pyramid_theme/node
+
+dependencies:
+  - drupal_pyramid_base

@@ -1,0 +1,39 @@
+@import '../init';
+
+// Admin region
+.region-admin {
+  display: table;
+  width: 100%;
+  background-color: $grey;  
+  .block {
+    display: table-cell;
+    vertical-align: middle;
+    &:last-child {
+      text-align: right;
+    }
+    &:first-child {
+      text-align: left;
+    }
+  }
+  .links {
+    list-style-type: none;
+  }
+  ul.tabs {
+    margin: auto;
+  }
+  a {
+    color: $black;
+    
+    &.is-active {
+      @include bold();
+    }
+  }  
+}
+
+// Quick fix when placed in Admin region.
+.block-devel-switch-user {
+  & > * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
