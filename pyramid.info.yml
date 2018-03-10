@@ -28,11 +28,11 @@ ckeditor_stylesheets:
   - css/base/wysiwyg.css
 
 libraries:
-  - drupal_pyramid_theme/base
+  - pyramid/base
 
 libraries-extend:
   node/drupal.node:
-    - drupal_pyramid_theme/node
+    - pyramid/node
 
 dependencies:
   - drupal_pyramid_base

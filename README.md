@@ -8,7 +8,7 @@ It aims to be added via Composer and be updated via Git Subtree.
 
 1. Add this theme as a dependency to your main Drupal project:
 ```
-composer require drupal-pyramid/drupal_pyramid_theme
+composer require drupal-pyramid/pyramid
 ```
 
 2. **Add autoload custom scripts to your composer.json**:
@@ -16,15 +16,15 @@ composer require drupal-pyramid/drupal_pyramid_theme
 ```
   "scripts": {
     "...",
-    "drupal-pyramid-theme-build": "DrupalPyramidTheme\\composer\\ScriptHandler::build",
-    "drupal-pyramid-theme-update": "DrupalPyramidTheme\\composer\\ScriptHandler::update",
+    "theme-build": "DrupalPyramidTheme\\composer\\ScriptHandler::build",
+    "theme-update": "DrupalPyramidTheme\\composer\\ScriptHandler::update",
     "post-install-cmd": [
       "...",
-      "@drupal-pyramid-theme-build"
+      "@theme-build"
     ],
     "post-update-cmd": [
       "...",
-      "@drupal-pyramid-theme-update"
+      "@theme-update"
     ]
   }
 ```
@@ -34,17 +34,17 @@ composer require drupal-pyramid/drupal_pyramid_theme
 
 3. Add this theme as a subproject with Git Subtree:
 ```
-git remote add -f drupal_pyramid_theme ssh://git@github.com:drupal-pyramid/drupal_pyramid_theme.git
-git subtree add --prefix web/modules/custom/drupal_pyramid_theme drupal_pyramid_theme master --squash
-git fetch drupal_pyramid_theme master
-git subtree pull --prefix web/modules/custom/drupal_pyramid_theme drupal_pyramid_theme master --squash
+git remote add -f pyramid ssh://git@github.com:drupal-pyramid/pyramid.git
+git subtree add --prefix web/modules/custom/pyramid pyramid master --squash
+git fetch pyramid master
+git subtree pull --prefix web/modules/custom/pyramid pyramid master --squash
 ```
 
 4. Contribute back to this theme:
 ```
 git add .
 git commit -m "Your commit message"
-git subtree push --prefix=web/modules/custom/drupal_pyramid_theme drupal_pyramid_theme master
+git subtree push --prefix=web/modules/custom/pyramid pyramid master
 ```
 
 ## Build and assets

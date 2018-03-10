@@ -8,14 +8,14 @@
 # ) !default;
 
 # Mobile.
-drupal_pyramid_theme.mobile:
+pyramid.mobile:
   label: mobile
   mediaQuery: '(max-width: 991px)'
   weight: 0
   multipliers:
     - 1x
 # Desktop.
-drupal_pyramid_theme.wide:
+pyramid.wide:
   label: wide
   mediaQuery: 'screen and (min-width: 992px)'
   weight: 1

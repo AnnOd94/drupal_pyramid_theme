@@ -13,7 +13,7 @@ class ScriptHandler {
    * Get current theme path.
    */
   private static function themePath() {
-    // $themePath = "./web/themes/contrib/drupal_pyramid_theme/";
+    // $themePath = "./web/themes/contrib/pyramid/";
     $themePath = realpath(__DIR__ . '/../..');
     return $themePath;
   }
